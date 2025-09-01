@@ -1,0 +1,26 @@
+{
+    "name": "elyar/personal-laravel-helpers",
+    "description": "Personal Laravel helpers and services for my projects",
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^12 || ^11"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Elyar\\LaravelHelpers\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Elyar",
+            "email": "elyareranjbar@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
