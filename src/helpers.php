@@ -1,6 +1,6 @@
 <?php
 
-use Elyar\LaravelHelpers\services\ApiResponse;
+use Elyar\LaravelHelpers\Services\ApiResponse;
 
 if (!function_exists('apiResponse')) {
     function apiResponse(): ApiResponse

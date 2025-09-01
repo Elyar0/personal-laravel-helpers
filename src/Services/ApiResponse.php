@@ -1,6 +1,6 @@
 <?php
 
-namespace Elyar\LaravelHelpers\services;
+namespace Elyar\LaravelHelpers\Services;
 
 use Illuminate\Http\JsonResponse;
 
