@@ -3,6 +3,8 @@
 namespace Elyar\LaravelHelpers\Services;
 
 use Illuminate\Http\JsonResponse;
+use ReflectionClass;
+use Symfony\Component\HttpFoundation\Response;
 
 class ApiResponse
 {
@@ -23,10 +25,9 @@ class ApiResponse
     {
         $response = [
             'success' => false,
-            'message' => $error
+            'message' => $error,
+            'error_type' => $errorType ?? getHttpCodeDetails($code)
         ];
-
-        empty($errorType) ?: $response['error_type'] = $errorType;
 
         return response()->json($response, $code);
     }

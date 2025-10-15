@@ -1,6 +1,7 @@
 <?php
 
 use Elyar\LaravelHelpers\Services\ApiResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 if (!function_exists('apiResponse')) {
     function apiResponse(): ApiResponse
@@ -36,5 +37,12 @@ if (!function_exists('prevInArray')) {
 
         $prevIndex = ($index - 1 + count($array)) % count($array);
         return $array[$prevIndex];
+    }
+}
+
+if (!function_exists('getHttpCodeDetails')) {
+    function getHttpCodeDetails(int $httpCode): string
+    {
+        return strtolower(str_replace(' ', '_', Response::$statusTexts[$httpCode]));
     }
 }
